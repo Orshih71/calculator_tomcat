@@ -14,7 +14,7 @@ public class Calculator extends HttpServlet {
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
-        out.print("<html><head><title>Test</title></head><body>");
+        out.print("<html><head><title>Calculator</title></head><body>");
         out.print("<form action=\"/\" method=\"post\">\n" +
                 "    <label>\n" +
                 "        <input name=\"num1\" type=\"number\"/>\n" +
@@ -50,7 +50,7 @@ public class Calculator extends HttpServlet {
     protected void doPost(HttpServletRequest request,
                           HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
-        out.print("<html><head><title>Test</title></head><body>");
+        out.print("<html><head><title>Calculator</title></head><body>");
         out.print("<form action=\"/\" method=\"post\">\n");
         if (request.getParameter("num1") != null && request.getParameter("num2") != null) {
             out.print("<label>\n" +
