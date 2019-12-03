@@ -52,7 +52,8 @@ public class Calculator extends HttpServlet {
         PrintWriter out = response.getWriter();
         out.print("<html><head><title>Calculator</title></head><body>");
         out.print("<form action=\"/\" method=\"post\">\n");
-        if (request.getParameter("num1") != null && request.getParameter("num2") != null) {
+        if (request.getParameter("num1") != null && request.getParameter("num2") != null
+                && !request.getParameter("num1").equals("") && !request.getParameter("num2").equals("")) {
             out.print("<label>\n" +
                     "        <input name=\"num1\" type=\"number\" value=\"" + request.getParameter("num1") + "\"/>\n" +
                     "    </label>\n" +
@@ -79,7 +80,8 @@ public class Calculator extends HttpServlet {
         }
         out.print("<br/>");
         out.print("<br/>");
-        if (request.getParameter("num3") != null && request.getParameter("num4") != null) {
+        if (request.getParameter("num3") != null && request.getParameter("num4") != null
+                && !request.getParameter("num3").equals("") && !request.getParameter("num4").equals("")) {
             out.print("<label>\n" +
                     "        <input name=\"num3\" type=\"number\" value=\"" + request.getParameter("num3") + "\"/>\n" +
                     "    </label>\n" +
@@ -95,7 +97,7 @@ public class Calculator extends HttpServlet {
             out.print("<label>\n" +
                     "        <input name=\"num3\" type=\"number\"/>\n" +
                     "    </label>\n" +
-                    "    +\n" +
+                    "    *\n" +
                     "    <label>\n" +
                     "        <input name=\"num4\" type=\"number\"/>\n" +
                     "    </label>\n" +
